@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		910241D06D4B6862AAD4EF97 /* Pods_SeachPlaces_Google.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 850AF5260AEDC5ABDB3D2989 /* Pods_SeachPlaces_Google.framework */; };
 		FE4EF1A02709DC1600EA6052 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4EF19F2709DC1600EA6052 /* AppDelegate.swift */; };
 		FE4EF1A22709DC1600EA6052 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4EF1A12709DC1600EA6052 /* SceneDelegate.swift */; };
 		FE4EF1A42709DC1600EA6052 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE4EF1A32709DC1600EA6052 /* ViewController.swift */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		60F87262843D3EFF060A897E /* Pods-SeachPlaces-Google.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SeachPlaces-Google.release.xcconfig"; path = "Target Support Files/Pods-SeachPlaces-Google/Pods-SeachPlaces-Google.release.xcconfig"; sourceTree = "<group>"; };
+		850AF5260AEDC5ABDB3D2989 /* Pods_SeachPlaces_Google.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SeachPlaces_Google.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AF4879C42F0C8139E00E1D2 /* Pods-SeachPlaces-Google.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SeachPlaces-Google.debug.xcconfig"; path = "Target Support Files/Pods-SeachPlaces-Google/Pods-SeachPlaces-Google.debug.xcconfig"; sourceTree = "<group>"; };
 		FE4EF19C2709DC1600EA6052 /* SeachPlaces-Google.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SeachPlaces-Google.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE4EF19F2709DC1600EA6052 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FE4EF1A12709DC1600EA6052 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				910241D06D4B6862AAD4EF97 /* Pods_SeachPlaces_Google.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D0E8CFE014264DA26E91C94C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8AF4879C42F0C8139E00E1D2 /* Pods-SeachPlaces-Google.debug.xcconfig */,
+				60F87262843D3EFF060A897E /* Pods-SeachPlaces-Google.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		DFA665DD65CA00D02B92D9C6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				850AF5260AEDC5ABDB3D2989 /* Pods_SeachPlaces_Google.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FE4EF1932709DC1600EA6052 = {
 			isa = PBXGroup;
 			children = (
 				FE4EF19E2709DC1600EA6052 /* SeachPlaces-Google */,
 				FE4EF19D2709DC1600EA6052 /* Products */,
+				D0E8CFE014264DA26E91C94C /* Pods */,
+				DFA665DD65CA00D02B92D9C6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FE4EF1B02709DC6200EA6052 /* Build configuration list for PBXNativeTarget "SeachPlaces-Google" */;
 			buildPhases = (
+				02DE364477C1217B5A6A252C /* [CP] Check Pods Manifest.lock */,
 				FE4EF1982709DC1600EA6052 /* Sources */,
 				FE4EF1992709DC1600EA6052 /* Frameworks */,
 				FE4EF19A2709DC1600EA6052 /* Resources */,
+				2F07CBB7F351E2F0F30B5262 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		02DE364477C1217B5A6A252C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SeachPlaces-Google-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2F07CBB7F351E2F0F30B5262 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SeachPlaces-Google/Pods-SeachPlaces-Google-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SeachPlaces-Google/Pods-SeachPlaces-Google-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SeachPlaces-Google/Pods-SeachPlaces-Google-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FE4EF1982709DC1600EA6052 /* Sources */ = {
@@ -283,6 +352,7 @@
 		};
 		FE4EF1B12709DC6200EA6052 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8AF4879C42F0C8139E00E1D2 /* Pods-SeachPlaces-Google.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -301,6 +371,7 @@
 		};
 		FE4EF1B22709DC6200EA6052 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 60F87262843D3EFF060A897E /* Pods-SeachPlaces-Google.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

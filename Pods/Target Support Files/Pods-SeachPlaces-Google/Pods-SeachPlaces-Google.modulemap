@@ -1,0 +1,6 @@
+framework module Pods_SeachPlaces_Google {
+  umbrella header "Pods-SeachPlaces-Google-umbrella.h"
+
+  export *
+  module * { export * }
+}
